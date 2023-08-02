@@ -1,34 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Register</title>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #56CCF2, #2F80ED);
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 36px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: 500;
+            grid-column: 1;
+            grid-row: span 1;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            grid-column: 2;
+            grid-row: span 1;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2F80ED;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #2F80ED;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+            grid-column: 2;
+            grid-row: span 1;
+        }
+        form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        line-height: 1.6;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    input[type="submit"] {
+        background-color: #2F80ED;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: 500;
+        /* Center the button horizontally by placing it in the second column and spanning both columns */
+        grid-column: span 2;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #1E63B8;
+        }
+
+        /* Additional Spacing */
+        @media screen and (max-width: 768px) {
+            form {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            /* Make the form a single column layout for smaller screens */
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            input[type="submit"] {
+                grid-column: 1;
+            }
+        }
+
+        /* Additional Spacing for larger screens */
+        @media screen and (min-width: 1200px) {
+            form {
+                padding: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<h1 align="center">Registration Page</h1>
-	<form action="Register" method="post">
-		<label>Bank ID</label>
-		<input type="text" name="bank_id"><br><br>
-		<label>Bank Name</label>
-		<input type="text" name="bank_name"><br><br>
-		<label>IFSC Code</label>
-		<input type="text" name="ifsc_code"><br><br>
-		<label>Account Number</label>
-		<input type="text" name="acc_no"><br><br>
-		<label>Pin</label>
-		<input type="text" name="pin"><br><br>
-		<label>Customer ID</label>
-		<input type="text" name="cust_id"><br><br>
-		<label>Customer Name</label>
-		<input type="text" name="cust_name"><br><br>
-		<label>Balance</label>
-		<input type="text" name="balance"><br><br>
-		<label>Email ID</label>
-		<input type="text" name="email"><br><br>
-		<label>Phone</label>
-		<input type="text" name="phone"><br><br>
-		<input type="submit" value="Register">
-	</form>
+    <header>
+        <h1>Registration</h1>
+    </header>
 
+    <form action="Register" method="post">
+        <label for="bank_id">Bank ID</label>
+        <input type="text" name="bank_id" id="bank_id" placeholder="Enter Bank ID">
+        <label for="bank_name">Bank Name</label>
+        <input type="text" name="bank_name" id="bank_name" placeholder="Enter Bank Name">
+        <label for="ifsc_code">IFSC Code</label>
+        <input type="text" name="ifsc_code" id="ifsc_code" placeholder="Enter IFSC Code">
+        <label for="acc_no">Account Number</label>
+        <input type="text" name="acc_no" id="acc_no" placeholder="Enter Account Number">
+        <label for="pin">Pin</label>
+        <input type="text" name="pin" id="pin" placeholder="Enter PIN">
+        <label for="cust_id">Customer ID</label>
+        <input type="text" name="cust_id" id="cust_id" placeholder="Enter Customer ID">
+        <label for="cust_name">Customer Name</label>
+        <input type="text" name="cust_name" id="cust_name" placeholder="Enter Customer Name">
+        <label for="balance">Balance</label>
+        <input type="text" name="balance" id="balance" placeholder="Enter Initial Balance">
+        <label for="email">Email ID</label>
+        <input type="text" name="email" id="email" placeholder="Enter Email ID">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+        <input type="submit" value="Register">
+    </form>
 </body>
 </html>

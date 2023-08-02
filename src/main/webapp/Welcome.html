@@ -1,12 +1,170 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Welcome Page</title>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <style>
+         main {
+        /* Existing styles... */
+        text-align: center; /* Center align the content in the 'main' section */
+    }
+
+    .greeting-container {
+        margin-bottom: 20px;
+    }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #56CCF2, #2F80ED);
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 36px;
+        }
+
+        nav {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #F3F3F3;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #EAEAEA;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            main {
+                max-width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        /* Additional Spacing */
+        @media screen and (min-width: 1200px) {
+            main {
+                padding: 40px;
+            }
+        }
+    
+        header {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+        main {
+            margin-top: 20px;
+        }
+
+        /* Add spacing between Register and Login buttons */
+        nav a {
+            margin-right: 10px;
+        }
+
+    </style>
+    <script>
+        // Dynamic elements - Greeting message
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentTime = new Date().getHours();
+            var greetingMsg;
+
+            if (currentTime >= 5 && currentTime < 12) {
+                greetingMsg = "Good Morning!";
+            } else if (currentTime >= 12 && currentTime < 17) {
+                greetingMsg = "Good Afternoon!";
+            } else {
+                greetingMsg = "Good Evening!";
+            }
+
+            var greetingElement = document.getElementById("greeting");
+            if (greetingElement) {
+                greetingElement.innerText = greetingMsg;
+            }
+        });
+    </script>
 </head>
 <body>
-	<h1 align="center">Bank Application</h1>
-	<a href="Register.html">Register</a><br><br>
-	<a href="Login.html">Login</a><br><br>
+    <header>
+        <h1>Bank Application</h1>
+    </header>
+
+    <nav>
+        <a href="Register.html">Register</a>
+        <a href="Login.html">Login</a>
+    </nav>
+
+    <main>
+        <div class="greeting-container">
+            <h2 id="greeting"></h2>
+        </div>
+        <p>Welcome to our Bank Application. This is a user-friendly and feature-rich platform that allows you to manage your finances effortlessly.</p>
+        <p>Experience secure online banking, Applying loans, Easy fund transfers, and much more.</p>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2023 Bank Application. All rights reserved.</p>
+    </footer>
 </body>
 </html>

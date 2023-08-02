@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #56CCF2, #2F80ED);
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 36px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            display: grid;
+            gap: 20px;
+        }
+        .footer {
+            text-align: center;
+            color: #777;
+            margin-top: 50px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            grid-column: 1;
+            grid-row: span 1;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            grid-column: 2;
+            grid-row: span 1;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #2F80ED;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #2F80ED;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+            /* Center the button horizontally by placing it in the second column and spanning both columns */
+            grid-column: span 2;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1E63B8;
+        }
+
+        /* Additional Spacing */
+        @media screen and (max-width: 768px) {
+            form {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <form action="Login" method="post">
+        <label for="cust_id">Customer ID</label>
+        <input type="text" name="cust_id" id="cust_id" placeholder="Enter Customer ID">
+        <label for="pin">PIN</label>
+        <input type="password" name="pin" id="pin" placeholder="Enter PIN">
+        <input type="submit" value="Login">
+    </form>
+    <div class="footer">
+        &copy; 2023 Bank Application. All rights reserved.
+    </div>
+</body>
+</html>
