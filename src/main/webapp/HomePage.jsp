@@ -83,10 +83,18 @@
             <a href="CheckBalance">Check Balance</a>
             <br><br>
             <a href="ChangePin.html">Change Pin</a>
+            <br><br>
+            <a href="Loan.jsp">Apply Loan</a>
+            <br><br>
+            <a href="Transfer.html">Transfer Amount</a>
+            <br><br>
+            <a href="TransactionHistory.html">Transaction History</a>
+            <br><br>
+            <a href="Logout">Logout</a>
         </div>
     </div>
     <div class="footer">
-        &copy; 2023 Bank Application. All rights reserved..
+        &copy; 2023 Bank Application. All rights reserved.
     </div>
 </body>
 </html>
