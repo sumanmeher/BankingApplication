@@ -88,7 +88,7 @@
             <br><br>
             <a href="Transfer.html">Transfer Amount</a>
             <br><br>
-            <a href="TransactionHistory.html">Transaction History</a>
+            <a href="TransactionHistory.jsp">Transaction History</a>
             <br><br>
             <a href="Logout">Logout</a>
         </div>

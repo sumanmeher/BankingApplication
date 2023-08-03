@@ -9,18 +9,16 @@
 <body>
 	<form action="Loan">
 		<h1>Apply Loan</h1>
-		<select name="loan">
-			<option value="HomeLoan">Home Loan</option>
-			<option value="EducationalLoan">Educational Loan</option>
-			<option value="VehicleLoan">Vehicle Loan</option>
-			<option value="GoldLoan">Gold Loan</option>
-			<option value="PersonalLoan">Personal Loan</option>
+		<select name="choice">
+			<option value="1">Home Loan</option>
+			<option value="2">Educational Loan</option>
+			<option value="3">Vehicle Loan</option>
+			<option value="4">Gold Loan</option>
+			<option value="5">Personal Loan</option>
 
-		</select> <br> <br> 
-		<label>Enter your choice</label> <input type="text" name="choice">
-		<input type="submit" value="Submit"> 
+		</select> <br> <br> <input type="submit" value="Submit">
 
-		
+
 	</form>
 
 </body>

@@ -11,7 +11,7 @@
 session=request.getSession();
 out.println("Your loan will be : "+session.getAttribute("l_type")+ "<BR> of tenure "+session.getAttribute("tenure")+"<BR> with interest"+session.getAttribute("interest"));
 %>
-
+<br><br>
 <a href="HomePage.jsp">Redirect</a>
 </body>
 </html>
